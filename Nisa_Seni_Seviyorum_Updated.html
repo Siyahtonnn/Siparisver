@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nisa Hanım Sizi Seviyorum</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdf6f6;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #333;
+        }
+        header {
+            background-color: #ff8c94;
+            color: white;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .photos {
+            margin: 20px auto;
+            max-width: 800px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .photos img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .order {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff4e3;
+            border: 1px solid #ffcccb;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .order button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .order button:hover {
+            background-color: #ff4d4d;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #ff8c94;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nisa Hanım, Sizi Seviyorum</h1>
+    </header>
+    <div class="photos">
+        <img src="photo1.jpg" alt="Fotoğraf 1">
+        <img src="photo2.jpg" alt="Fotoğraf 2">
+    </div>
+    <div class="order">
+        <p>Bu sipariş sadece Nisa Hanım'a özeldir!</p>
+        <button onclick="openMessage()">Sipariş Ver</button>
+    </div>
+    <footer>
+        <p>Sizin için her zaman buradayım, Nisa Hanım ❤️</p>
+    </footer>
+
+    <script>
+        function openMessage() {
+            const message = `
+                <html lang="tr">
+                <head>
+                    <title>Mesaj</title>
+                    <style>
+                        body {
+                            font-family: Arial, sans-serif;
+                            background-color: #fef4f4;
+                            text-align: center;
+                            padding: 20px;
+                            color: #333;
+                        }
+                        p {
+                            font-size: 1.2rem;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>Nisa</h1>
+                    <p>Hayatımda ne kadar değerlisin tahmin edemezsin.</p>
+                    <p>Sen benim mutluluğumu, yaşama hevesimi yıllar sonra geri veren kişisin.</p>
+                    <p>Benim için çok değerlisin, bunu unutma.</p>
+                    <p>Evet, bu siteyi yaparken biraz uğraştım ama olsun.</p>
+                    <p>Gülmen için her şeyi yaparım; yeter ki o güzel yüzünde tebessüm oluşsun.</p>
+                    <p>O bana yeter. İyi ki varsın. :)</p>
+                </body>
+                </html>
+            `;
+            const newWindow = window.open();
+            newWindow.document.write(message);
+        }
+    </script>
+</body>
+</html>
